@@ -1,0 +1,24 @@
+// transition过渡动画效果 http://vuejs.org/v2/guide/transitions.html
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.content{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow: auto;
+}
+
+a:hover{
+    text-decoration: none;
+}

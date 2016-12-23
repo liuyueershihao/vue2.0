@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>青海</title>
+    <meta name="viewport"
+          content=" width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="#3368B8" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Author" content="wangye" />
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- popup元素用于显示toast、alert、confirm等操作反馈信息 -->
+    <div id="popup"></div>
+</body>
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type="text/javascript">
+(function () {
+    var html = document.documentElement
+    var body = document.getElementsByTagName('body')[0] || document.body
+    const REM2Px = 10
+    var dpr = window.devicePixelRatio
+    var width = html.getBoundingClientRect().width
+    html.setAttribute('data-dpr', dpr)
+    html.style.fontSize = width / REM2Px + 'px'
+    body.style.fontSize = 16 + 'px'
+})()
+</script>
+
+</html>
