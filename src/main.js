@@ -7,10 +7,6 @@ import router from './route-config'
 import VueResource from 'vue-resource'
 import 'weui'
 import './components/index'
-// import weui from 'weui.js'
-// import 'vconsole'
-// import loading from './components/loading/index'
-// Vue.use(loading)
 Vue.use(VueResource)
 Vue.http.options.xhr = {
     withCredentials: true

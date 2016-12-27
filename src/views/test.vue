@@ -4,8 +4,7 @@
         <div class="weui-tab">
             <div class="weui-tab__panel">
 
-                <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_default">picker</a>
-
+                <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_default" @click="clickPicker">picker</a>
             </div>
             <tabbar :index='tabbar.index'></tabbar>
         </div>
@@ -43,6 +42,25 @@ export default {
             tabbar: {
                 index: 1
             },
+            dataList: [{
+                name: '飞机'
+            }, {
+                name: '汽车'
+            }, {
+                name: '轮船'
+            }, {
+                name: '自行车'
+            }, {
+                name: '火车'
+            }, {
+                name: '走路'
+            }, {
+                name: '游泳'
+            }, {
+                name: '跑步'
+            }, {
+                name: '还有啥'
+            }],
         }
     },
     mounted() {
@@ -58,6 +76,20 @@ export default {
         // })
         // this.loading(true)
         // this.toast('操作成功')
+    },
+    methods: {
+        clickPicker: function () {
+            let self = this
+            this.picker({
+                data: self.dataList,
+                onChange: function () {
+                    console.log(self.dataList[this.tempIndex])
+                },
+                onClose: function () {
+                    console.log(self.dataList[this.tempIndex])
+                }
+            })
+        }
     }
 }
 
