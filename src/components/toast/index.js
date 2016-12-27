@@ -1,13 +1,13 @@
 import Toast from './toast.vue'
 import Vue from 'vue'
-const toast = function (param) {
+const toast = function (content) {
     const div = document.getElementById('popup')
-    div.innerHTML = '<Toast :content="param"></Toast>'
+    div.innerHTML = '<Toast :content="content"></Toast>'
     return new Vue({
         el: div,
         data () {
             return {
-                param: param
+                content
             }
         },
         components: {

@@ -7,11 +7,3 @@
 </div>
 
 </template>
-<script type="text/javascript">
-export default {
-    mounted () {
-        // this.loading(true)
-    }
-}
-
-</script>

@@ -23,13 +23,5 @@
 <script>
 export default {
     props: ['index'],
-    // computed: {
-    //     index: function () {
-    //         return this.index || 0
-    //     }
-    // },
-    mounted () {
-        console.log(this.index === 1)
-    }
 }
 </script>

@@ -6,24 +6,29 @@ vue2.0+webpack+vue-router+vue-resource-weui
 在weui的基础上，我用weui扩展了一些适合于vue的基本组件，并简化了他们的使用(好像weui也有js版本的，叫做[weui.js](https://github.com/weui/weui.js),但是好像现在还是1.0.0alpha版本，所以也就没采用)
 
 一下是我扩展的基本内容:
+
 1. alert组件
 
-        // text: 需要显示的提示信息，
-        // fn: 点击确定后需要执行的函数
-        this.alert(text, fn)
+        this.alert({
+            content: '提示信息',
+            ensure: function () {
+                // 确定后需要执行的操作,可以省略
+            }
+        })
 
 2. loading组件
 
-        // boolean: loading组件需要一个布尔值作为唯一参数
+        // boolean: loading组件需要一个布尔值作为唯一参数, ture为显示,false为隐藏，其他则报错
         this.loading(boolean)
 
 3. confirm组件
 
-        // text: 需要显示的提示信息
-        // cancelFn: 取消时执行的操作
-        // ensureFn: 确定时执行的操作
-        this.confirm(text, cancelFn, ensureFn)
-        
+        this.confirm({
+            content: '提示信息',
+            cancel: function () {},
+            ensure: function () {}
+        })
+
 4. toast组件
 
         //text: 需要显示的提示信息

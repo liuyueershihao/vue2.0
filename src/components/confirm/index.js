@@ -1,16 +1,14 @@
 import Confirm from './confirm.vue'
 import Vue from 'vue'
 
-const confirm = function (content, cancelCallback, ensureCallback) {
+const confirm = function (obj) {
     const div = document.getElementById('popup')
-    div.innerHTML = '<Confirm :content="content" :cancel="cancelCallback" :ensure="ensureCallback"></Confirm>'
+    div.innerHTML = '<Confirm :obj="obj"></Confirm>'
     return new Vue({
         el: div,
         data () {
             return {
-                content,
-                cancelCallback,
-                ensureCallback
+                obj
             }
         },
         components: {

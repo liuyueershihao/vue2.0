@@ -13,14 +13,17 @@
 
 <script>
 export default {
-    props: ['content', 'ensure'],
+    props: ['obj'],
     data () {
         return {
-            show: true
+            show: true,
+            content: this.obj.content || '我想你需要一个提示信息来代替我',
+            ensure: this.obj.ensure || function () {},
         }
     },
     methods: {
         ensureFun: function () {
+            this.close()
             this.ensure()
         },
         close: function () {

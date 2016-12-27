@@ -13,7 +13,6 @@
 <script>
 // import Vue from 'vue'
 import tabbar from '../components/tabbar.vue'
-import picker from '../components/picker.vue'
 export default {
     beforeRouteEnter(to, from, next) {
         // 在渲染该组件的对应路由被 confirm 前调用
@@ -34,8 +33,7 @@ export default {
         next()
     },
     components: {
-        tabbar,
-        picker
+        tabbar
     },
     data() {
         return {
@@ -64,15 +62,20 @@ export default {
         }
     },
     mounted() {
-        // this.confirm('hahoh', function () {
-        //     this.close()
-        //     console.log('cancel')
-        // }, function () {
-        //     this.close()
-        //     console.log('ensure and do somethin')
-        // })
-        // this.alert('是否确定', function () {
-        //     this.close()
+        this.confirm({
+            content: '这里有一些提示信息',
+            cancel: function () {
+                console.log('you has clicked cancel button')
+            },
+            ensure: function () {
+                console.log('you has clicked ensure button')
+            }
+        })
+        // this.alert({
+        //     content: '这里有一些提示信息',
+        //     ensure: function () {
+        //         console.log('you has clicked sure button')
+        //     }
         // })
         // this.loading(true)
         // this.toast('操作成功')
