@@ -7,19 +7,23 @@ vue2.0+webpack+vue-router+vue-resource-weui
 
 一下是我扩展的基本内容:
 1. alert组件
+
         // text: 需要显示的提示信息，
         // fn: 点击确定后需要执行的函数
         this.alert(text, fn)
 
 2. loading组件
+
         // boolean: loading组件需要一个布尔值作为唯一参数
         this.loading(boolean)
 
 3. confirm组件
+
         // text: 需要显示的提示信息
         // cancelFn: 取消时执行的操作
         // ensureFn: 确定时执行的操作
         this.confirm(text, cancelFn, ensureFn)
+        
 4. toast组件
 
         //text: 需要显示的提示信息
